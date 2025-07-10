@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UrbanWear - Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-nav">
+      <img src="images/logo.png" alt="UrbanWear Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="section-title">Contact Us</h1>
+    <section class="contact-section">
+      
+      <!-- Contact Form -->
+      <form class="contact-form" onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <!-- Store Contact Info -->
+      <div class="store-details">
+        <h2>Connect with Us</h2>
+        <p><i class="fas fa-phone"></i> <a href="tel:+9779876543210">+977 9876543210</a></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:info@urbanwear.com">info@urbanwear.com</a></p>
+        <p><i class="fab fa-instagram"></i> <a href="https://instagram.com/urbanwear" target="_blank">@urbanwear</a></p>
+        <p><i class="fab fa-facebook"></i> <a href="https://facebook.com/urbanwearnepal" target="_blank">facebook.com/urbanwearnepal</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 UrbanWear | <a href="mailto:info@urbanwear.com">info@urbanwear.com</a></p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function validateForm() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (name === "" || email === "" || message === "") {
+        alert(" Please fill in all fields.");
+        return false;
+      }
+
+      alert(" Message sent! We'll get back to you soon.");
+      return true;
+    }
+  </script>
+</body>
+</html>
+
+
